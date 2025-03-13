@@ -10,12 +10,12 @@ const values = [
 ];
 
 const cards: CardProps[] = [
-    {
-        icon: <MdOutlineVerifiedUser size={44} color="#71dcf5" />,
-        title: "Telegram Mini App",
-        description:
-            "One of the finest User Experince is created for the users. ",
-    },
+    // {
+    //     icon: <MdOutlineVerifiedUser size={44} color="#71dcf5" />,
+    //     title: "Telegram Mini App",
+    //     description:
+    //         "One of the finest User Experince is created for the users. ",
+    // },
     {
         icon: <RiWallet3Line size={44} color="#948fe8" />,
         title: "Global governance and sentiment tracking",
