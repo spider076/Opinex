@@ -42,6 +42,16 @@ function App() {
                     // </Animate>
                 ))}
             </section>
+
+                        <section className="max-w-6xl xl:px-0 px-4 flex center col mx-auto pb-8 md:gap-36 gap-12">
+                <div id={APP_BODY_ID} className="fixed inset-0 light round-gradient" />
+                {Components.map(({ El, id }, i) => (
+                    // <Animate id={id} n={i + 1} key={id + i}>
+                    <El />
+                    // </Animate>
+                ))}
+            </section>
+
         </main>
     );
 }
