@@ -6,20 +6,22 @@ const { getTrendingTopics } = require("./services/geminiService");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-let latestTopic = null;
+var latestTopic = null;
 
 // Fetch on startup
 const fetchAndStoreTopics = async () => {
   const result = await getTrendingTopics();
   console.log("result ; ", result);
-  latestTopic = result[0] || [];
+  latestTopic = result;
+
+  console.log(latestTopic);
   console.log("Updated trending topics at", new Date().toLocaleString());
 };
 
 fetchAndStoreTopics();
 
 // Schedule to run every hour
-cron.schedule("0 * * * *", fetchAndStoreTopics);
+// cron.schedule("0 * * * *", fetchAndStoreTopics);
 
 // API endpoint to get trending topics
 app.get("/trending", (req, res) => {
