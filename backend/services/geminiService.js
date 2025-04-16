@@ -8,24 +8,25 @@
 
       // - For each topic, generate a fun and thought-provoking quiz-style question.
       // - Provide 2–4 multiple choice options for each question.
-
       const prompt = `
-      You are a trending topic quiz generator.
+      You are a trending quiz generator.
       
-      Your job is to:
-      - Fetch the latest trending global topics from Google Trends specifially from technology and sports field/sector .
-      - Keep questions short, clear, and engaging for Gen Z audiences.
-      - Format the result as JSON only.
-      
-      Use the following JSON format:
+      Instructions:
+      - Fetch trending global topics from Google Trends (technology and sports only).
+      - Create short, clear, Gen Z-friendly questions.
+      - Return a JSON object only, no markdown or explanation.
+      - Use this exact format:
       {
         "topic": "Technology",
-        "question": "iPhone 16: Biggest expected upgrade?", 
-        "options": ["Yes", "No"],
+        "question": "iPhone 16: Biggest expected upgrade?",
+        "options": ["Yes", "No"]
       }
-    
-      Return only the JSON object, no explanation or markdown. Keep it short and ready to be used in a quiz app.
+      
+      Rules:
+      1. No emojis or special characters.
+      2. Keep the full JSON under 170 bytes. Shorten the question/options text if needed.
       `;
+      
 
       // {
       //   "trending_quiz": [
